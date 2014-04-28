@@ -1,1 +1,15 @@
 @import 'bootswatch/bootstrap.min.scss';
+
+.page-content{
+  min-height: 480px;
+}
+
+.page-footer{
+  margin-top: 50px;
+  padding: 20px 0;
+  background: #000;
+}
+
+p.author{
+  font-style: italic;
+}

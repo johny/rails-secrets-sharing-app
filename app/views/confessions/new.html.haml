@@ -1,0 +1,23 @@
+%div.page-header
+  %h1 Nowe wyznanie
+
+%div.page-content
+  = form_for [@confession] do |f|
+
+    .form-group
+      = f.label :title, "Tytuł (opcjonalny):"
+      = f.text_field :title, class: 'form-control', autofocus: true
+      %span.help-block Jeśli nie chcesz nadawać tytułu, po prostu zostaw puste pole
+
+    .form-group
+      = f.label :description, "Treść:"
+      = f.text_area :description, class: 'form-control', rows: 8
+      %span.help-block Wulgaryzmy, groźby, skrajne przejawy nietolerancji i rasizmu nie będą tolerowane.<br/>Zabronione jest również publikowanie danych osobowych oraz informacji umożliwiających identyfikację osób w serwisie.
+
+    .form-group
+      = f.label :author, "Podpis (opcjonalny):"
+      = f.text_field :author, class: 'form-control', autofocus: true, placeholder: "To może być Twój pseudonim, imię, inicjały..."
+      %span.help-block Pamiętaj, aby nie zdradzać toższamości!
+
+    .actions
+      = f.submit 'Dodaj wyznanie', class: "btn btn-primary btn-lg"

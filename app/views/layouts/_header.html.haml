@@ -12,8 +12,10 @@
           %sup beta
       .collapse.navbar-collapse
         %ul.nav.navbar-nav
-          %li= link_to "Wyznania", "#"
-          %li= link_to "Sekrety", "#"
+          %li
+            = link_to confessions_path do
+              Wyznania
+
 
         -#
           - if user_signed_in?

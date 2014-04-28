@@ -1,0 +1,20 @@
+%div.page-header
+  %h1 Dzisiejsze wyznania
+
+%div.page-content
+  - if @confessions.size > 0
+    - @confessions.each do |c|
+      %div.well
+        - unless c.title.blank?
+          %h3= c.title
+        = simple_format c.description
+        %p.author
+          = "#{distance_of_time_in_words_to_now c.created_at} temu"
+          &mdash;
+          - if c.author.blank?
+            Anonimowe
+          - else
+            = c.author
+  - else
+    %p Nikt nie dodał jeszcze wyznania. Odważysz się?
+    = link_to "Dodaj wyznanie", new_confession_path, class: 'btn btn-primary'
