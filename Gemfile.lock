@@ -141,6 +141,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   capistrano
+  capistrano-bundler
   capistrano-rails
   capistrano-rvm
   haml-rails
