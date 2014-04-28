@@ -1,7 +1,7 @@
 class ConfessionsController < ApplicationController
 
   def index
-    @confessions = Confession.all
+    @confessions = Confession.all.order(created_at: :desc)
   end
 
   def new
