@@ -1,6 +1,7 @@
 %div.page-header
   %h1 Dzisiejsze wyznania
-
+  %nav
+    = link_to "+ dodaj wyznanie", new_confession_path, class: 'btn btn-primary'
 %div.page-content
   - if @confessions.size > 0
     - @confessions.each do |c|
@@ -15,6 +16,6 @@
             Anonimowe
           - else
             = c.author
+    = link_to "Dodaj własne wyznanie", new_confession_path, class: 'btn btn-primary'
   - else
     %p Nikt nie dodał jeszcze wyznania. Odważysz się?
-    = link_to "Dodaj wyznanie", new_confession_path, class: 'btn btn-primary'

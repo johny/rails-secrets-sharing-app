@@ -4,6 +4,16 @@
   min-height: 480px;
 }
 
+.page-header{
+  position: relative;
+
+  nav{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
 .page-footer{
   margin-top: 50px;
   padding: 20px 0;
