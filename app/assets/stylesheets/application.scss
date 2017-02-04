@@ -1,25 +1,11 @@
-@import 'bootswatch/bootstrap.min.scss';
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300&subset=latin,latin-ext);
 
-.page-content{
-  min-height: 480px;
-}
+$font-family-serif: 'Roboto Slab', Georgia, "Times New Roman", Times, serif;
+$font-family-base: $font-family-serif;
 
-.page-header{
-  position: relative;
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
-  nav{
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-}
-
-.page-footer{
-  margin-top: 50px;
-  padding: 20px 0;
-  background: #000;
-}
-
-p.author{
-  font-style: italic;
-}
+@import 'modules/header';
+@import 'modules/hero';
+@import 'modules/footer';

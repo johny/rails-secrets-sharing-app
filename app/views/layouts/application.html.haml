@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Anoon.pl - Anonimowe sekrety, wyznania i konwersacje
+    %title Anonimowe sekrety, wyznania i konwersacje na Anonimowe-Sekrety.pl
     %meta{name: 'description', content: 'Dziel się sekretami i anonimowymi informacjami. Znajdź wyznania nieznajomych, zobacz czy jest coś ciekawego dla Ciebie. 100% dyskrecji!'}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
@@ -10,7 +10,12 @@
     - if Rails.env == 'production'
       = render partial: 'layouts/gat'
     = render partial: 'layouts/header'
+
+    - if content_for? :hero
+      = yield :hero
+
     %div.container
       = render partial: 'layouts/flash'
       = yield
+
     = render partial: 'layouts/footer'

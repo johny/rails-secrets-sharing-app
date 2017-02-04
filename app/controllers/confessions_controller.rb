@@ -1,5 +1,12 @@
 class ConfessionsController < ApplicationController
 
+  def special
+    @confession = Confession.last
+    if @confession.nil?
+      render 'static/index'
+    end
+  end
+
   def index
     @confessions = Confession.all.order(created_at: :desc)
   end

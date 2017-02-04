@@ -1,30 +1,4 @@
-%header
-  %nav.navbar.navbar-default.navbar-static-top
-    .container
-      .navbar-header
-        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-          %span.sr-only Toggle navigation
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-        = link_to root_path, class: 'navbar-brand' do
-          Anoon.pl
-          %sup beta
-      .collapse.navbar-collapse
-        %ul.nav.navbar-nav
-          %li
-            = link_to confessions_path do
-              Wyznania
-
-
-        -#
-          - if user_signed_in?
-            %ul.nav.navbar-nav
-              %li= link_to "", dashboard_path
-              %li= link_to "Map", game_map_path
-            %ul.nav.navbar-nav.navbar-right
-              %li.navbar-text
-                Hello
-                %strong= current_user.name
-              %li= link_to "Profile", profile_path
-              %li= link_to "Logout", destroy_user_session_path, method: :delete
+%header.site-header
+  = link_to root_path, class: 'page-logo' do
+    Anonimowe Sekrety
+  %p Możesz tu bez obaw możesz podzielić się swoimi wyznaniami i sekretami.

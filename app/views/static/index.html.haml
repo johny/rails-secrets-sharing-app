@@ -1,20 +1,23 @@
-%div.page-content
-  %div.jumbotron
-    %h1 Anonimowe sekrety i wyznania
-    %p.lead Anoon.pl to serwis w którym dyskretnie i bez obaw możesz podzielić się wyznaniami i sekretami.
-    %p
-      = link_to "Dodaj wyznanie", new_confession_path, class: "btn btn-primary"
-      = link_to "Zobacz wyznania innych", confessions_path, class: "btn btn-default"
+- content_for :hero do
+  %div.hero
+    %div.container
+      %h1 Jaki jest Twój sekret?
+      %p.lead
+        W serwisie Anonimowe-Wyzwania.pl możesz podzielić się wyznaniami i sekretami.<br/>
+        Dyskretnie i bez obaw!
+      %p
+        = link_to "Dodaj wyznanie", new_confession_path, class: "btn btn-primary"
+        = link_to "Zobacz wyznania innych", confessions_path, class: "btn btn-default"
 
-  %div.row
-    %div.col-md-4
-      %h3 Sekrety są bezpieczne
-      %p Nie przechowujemy żadnych danych, które mogą Cię zidentyfikować.
+%div.row
+  %div.col-md-4
+    %h3 Sekrety są bezpieczne
+    %p Nie przechowujemy żadnych danych, które mogą Cię zidentyfikować.
 
-    %div.col-md-4
-      %h3 Anonimowe rozmowy
-      %p Możesz porozmawiać na dowolne tematy bez wstydu, niepewności i zażenowania.
+  %div.col-md-4
+    %h3 Anonimowe rozmowy
+    %p Możesz porozmawiać na dowolne tematy bez wstydu, niepewności i zażenowania.
 
-    %div.col-md-4
-      %h3 Odkrywasz
-      %p Poznając sekrety i wyznania innych możesz się przekonać i dowiedzieć wielu ciekawych rzeczy
+  %div.col-md-4
+    %h3 Odkrywasz
+    %p Poznając sekrety i wyznania innych możesz się przekonać i dowiedzieć wielu ciekawych rzeczy

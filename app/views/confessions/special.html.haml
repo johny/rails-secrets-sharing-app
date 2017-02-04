@@ -1,0 +1,5 @@
+- content_for :hero do
+  %div.secret
+    - unless @confession.title.blank?
+      %h1= @confession.title
+    = simple_format @confession.description
